@@ -20,7 +20,7 @@ function Left({setReviews}) {
 
     async function review() {
         try {
-            const response = await axios.post('http://localhost:3000/ai/get-response',{ prompt: code });
+            const response = await axios.post('https://code-reviewer-fp82.onrender.com',{ prompt: code });
             setReviews(response.data);
         } catch (error) {
             console.error('Error during code review:', error);
